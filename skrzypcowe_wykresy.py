@@ -11,8 +11,7 @@ for par in params:
 
     #dane = pd.read_csv("wyniki_" + par + "_umarli.txt", header = None, sep = " ")
     dane = pd.read_csv("wyniki_" + par + "_chorzy.txt", header = None, sep = " ")
-    dane = dane.iloc[:,:4]
-    dane[dane < 0] = -999
+    dane = dane.iloc[:, :4]
     
     dane.columns = ['0.2', '0.4', '0.6', '0.8']
     print(dane)
